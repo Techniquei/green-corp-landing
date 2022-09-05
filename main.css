@@ -263,9 +263,7 @@ footer{
 .features__feedback-right{
     display: flex;
     align-items: center;
-    height: 170px;
-    
-
+    height: 150px;
 }
 
 .features__box{
@@ -294,6 +292,74 @@ footer{
 
 .stars{
     color: #ff7039;
+}
+
+.promo__image{
+    background-image: url('img/promo.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.promo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo__right{
+    background-color: #dd5f26;
+    padding: 160px 60px;
+    width: 50%;
+}
+
+.promo__right__card{
+    background-color: white;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.promo__right__card p{
+    opacity: 0.8;
+}
+
+.p__circle{
+    background-color: #ec6b29;
+    margin-right: 10px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.promo__right__card p span{
+    font-size: 10px;
+    display: inline;
+    align-items: center;
+    color: #ec6b29;
+    margin-right: 10px;
+}
+
+.promo__right__card button{
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.button__icon{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.promo__right__card div{
+    display: flex;
+    justify-content: center;
+    
 }
 
 @keyframes rotation {
@@ -346,7 +412,9 @@ footer{
     }
   
     footer {
-        padding: 50px 10px;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-bottom: 60px;
     }
   
     .footer__container {
@@ -359,11 +427,14 @@ footer{
 
     .cards{
         grid-template-columns: auto;
+
+    
     }
 
     .features__feedback{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .features__feedback-left{
@@ -386,7 +457,29 @@ footer{
     .features__feedback-right{
         flex-direction: column;
         flex: auto;
+        height: auto;
+        width: 95vw;
     }
+
+    .features__box{
+        width:75vw;
+    }
+
+    .promo{
+        width: auto;
+        flex-direction: column-reverse;
+    }
+
+    .promo__image{
+        width: auto;
+        height: 500px;
+    }
+
+    .promo__right{
+        padding: 50px 10px;
+        width: auto;
+    }
+
  }
 
 @media (max-width:1024px){
