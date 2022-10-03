@@ -63,6 +63,15 @@ button:hover{
     position: absolute;
 }
 
+.orb-canvas{
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
 .about{
     display: flex;
     justify-content: space-around;
@@ -72,6 +81,7 @@ button:hover{
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 .about h1{
     font-size: 70px;
@@ -361,6 +371,17 @@ footer{
     justify-content: center;
     
 }
+
+
+.promo__right__card p::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
+    margin-right: 10px;
+  }
 
 @keyframes rotation {
     0%{
