@@ -372,6 +372,7 @@ footer{
     
 }
 
+<<<<<<< HEAD
 
 .promo__right__card p::before {
     content: '';
@@ -383,6 +384,8 @@ footer{
     margin-right: 10px;
   }
 
+=======
+>>>>>>> a0b73ae832dd44699140a6edafed9c952432af4a
 @keyframes rotation {
     0%{
         transform: rotate(0deg);
