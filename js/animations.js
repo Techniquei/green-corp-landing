@@ -44,13 +44,12 @@ document.querySelector('#budget').addEventListener('change', function handleSele
 });
 
 function updateScroll(){
-  let header = document.querySelector('.header');
-  header.classList.add('header__scrolled');
-  // if(window.scrollY>0){
-  //   header.classList.add('header__scrolled');
-  // }else{
-  //   header.classList.remove('header__scrolled');
-  // }
+  let header = document.querySelector('header');
+   if(window.scrollY>0){
+   header.classList.add('header__scrolled');
+   }else{
+     header.classList.remove('header__scrolled');
+   }
   let windowBottomPosition = window.scrollY + window.innerHeight;
   let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
   if(windowBottomPosition>=countElementPosition && !animationInited){
@@ -60,3 +59,19 @@ function updateScroll(){
 };
 
 window.addEventListener('scroll', updateScroll);
+
+function addSmoothScroll(anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+ 
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+}
+ 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  addSmoothScroll(anchor);
+});
+
+addSmoothScroll(document.querySelector('.more-button'));
